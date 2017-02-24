@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+        console.log("hello");
+        $("button").click(function() {
+      
+            $.ajax({url: "demo.txt",type:'GET',success:function(result) {
+
+                    $("#div1").text(result);
+
+            },error:function(){
+
+            }});
+            console.log("outside ajax");
+
+        });
+});
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>Retrieve data from server using ajax </h2></div>
+
+<button>Get External Content</button>
+
+</body>
+</html>

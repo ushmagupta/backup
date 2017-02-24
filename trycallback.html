@@ -1,0 +1,30 @@
+
+<html>
+<body>
+<script>
+
+readfromfile();
+
+function readfromfile(callC){
+    console.log('start');
+    _read(function(){
+      console.log('read complete');
+    }
+    );
+    console.log('end');
+
+
+}
+
+function _read(cb)
+{
+
+  setTimeout(cb,500);
+// or setTimeout(function(){cb();},500)
+}
+
+
+
+</script>
+</body>
+</html>

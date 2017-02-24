@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ques7</title>
+
+<script type="text/javascript">
+
+
+function test() {
+
+console.log(a); //undefined
+console.log(fun()); //2
+
+var a = 1;
+function fun() {
+return 2;
+}
+}
+
+test();
+
+</script>
+</head>
+<body>
+Check through console ....<br><br>
+<h3> RESULT : </h3>
+<p> Console line1 :prints undefined because acc to hoisting, declaration comes at top of function test but it is not initialized before using it</p>
+<p> Console line2 : prints 2 as fun() will be called and its body will come at top od test functn and will return 2 
+
+
+</body>
+</html>

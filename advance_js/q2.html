@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ques2</title>
+<script type="text/javascript">
+
+	var myObject = {
+			foo: "bar",
+			func: function() {
+			var self = this;
+			console.log("outer func: this.foo = " + this.foo);
+			console.log("outer func: self.foo = " + self.foo);
+					(function() {
+							console.log("inner func: this.foo = " + this.foo);
+							console.log("inner func: self.foo = " + self.foo);
+
+							}());
+			}
+};
+myObject.func();
+
+</script>
+</head>
+<body>
+
+<b> check through console ...</b><br>
+<br><b>Reason of the output</b> <br>
+Console line1: it will call the myobject key 'foo' which is defined earlier & prints its value bar <br>
+Console line2: the self variable has value of 'this' so it will call myObject key 'foo' and prints bar <br>
+Console line3: it is in self invoking function and foo is not defined under this scope so prints undefined <br>
+Console line4: scope of this self invoking function is inside the myobject so it will call 'foo' because in 'self' we have assigned 'this' and 'this' calls foo & prints bar. <br>
+</p>
+
+</body>
+</html>

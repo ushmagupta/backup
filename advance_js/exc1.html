@@ -1,0 +1,43 @@
+<html>
+<body>
+<script>
+
+
+/*
+function calculate() {
+
+ try{
+  var amount = prompt('Enter the amount');
+  if(amount<=100 || amount>=100000) throw "PA out of bound";
+  var interest = prompt('Enter interest rate');
+  if(interest<4||interest >12) throw "interest out of bound";
+  var years = prompt('Enter no of years');
+  if(years<1||years>5) throw "time out of bound";
+  var si= (amount*interest*years)/100;
+  alert("Simple interest is  "+si);
+
+}catch(err)
+{
+
+   alert("error is ::: "+err);
+
+}
+
+}
+*/function say667() {
+    // Local variable that ends up within closure
+    var num = 42;
+    var say = function() { console.log(num);num++; }
+
+    return say;
+}
+var sayNumber = say667();
+sayNumber();
+sayNumber();
+sayNumber();
+</script>
+
+<button type="button" onclick="">Test Input</button>
+
+</body>
+</html>
